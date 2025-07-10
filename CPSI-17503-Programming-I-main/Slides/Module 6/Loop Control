@@ -1,0 +1,73 @@
+## Loop Control
+
+### Slide 1: Controlling Loop Behavior
+
+  * Sometimes you need more control over your loops than just letting them run from start to finish.
+  * Python provides two statements to control the flow of loops:
+      * `break`: Exits the loop immediately.
+      * `continue`: Skips the current iteration and proceeds to the next.
+
+### Slide 2: The `break` Statement
+
+  * The `break` statement terminates the current loop and resumes execution at the next statement after the loop.
+  * It is often used inside an `if` statement to exit the loop when a certain condition is met.
+
+<!-- end list -->
+```py
+
+# Find the first number divisible by 7
+numbers = [1, 5, 12, 21, 8, 30]
+
+for num in numbers:
+    print(f"Checking {num}...")
+    if num % 7 == 0:
+        print(f"Found a number divisible by 7: {num}")
+        break  # Exit the loop now
+
+print("Loop finished or was broken.")
+```
+### Slide 3: The `continue` Statement
+
+  * The `continue` statement rejects all the remaining statements in the current iteration of the loop and moves the control back to the top of the loop.
+  * It allows you to skip over certain items in a sequence.
+
+<!-- end list -->
+```py
+
+# Print only the odd numbers
+for i in range(1, 11): # numbers from 1 to 10
+    if i % 2 == 0: # If the number is even...
+        continue   # ...skip to the next iteration
+
+    # This line will only be reached for odd numbers
+    print(i)
+```
+### Slide 4: `break` and `continue` with `while` Loops
+
+  * `break` and `continue` work the same way inside `while` loops.
+
+<!-- end list -->
+```py
+
+# A simple user input loop
+while True: # This would be an infinite loop without a break
+    user_input = input("Enter a command (or 'quit' to exit): ")
+
+    if user_input == 'quit':
+        break # Exit the loop
+
+    if user_input == 'skip':
+        print("Skipping...")
+        continue # Go to the next loop iteration
+
+    print(f"Processing command: {user_input}")
+
+print("Exited the command loop.")
+```
+### Slide 5: Further Reading and Practice
+
+  * **Further Reading:** *Think Python, 2nd Edition*, Chapter 7: "Iteration".
+  * **Practice Exercise:**
+      * Write a `for` loop that iterates from 1 to 20. Inside the loop, print the number, but use `break` to exit the loop if the number is greater than 15.
+      * Write a program that loops through a list of numbers and uses `continue` to skip any negative numbers, printing only the positive ones.
+      * Create a "guessing game" where the user has 3 tries. Use a loop and `break` if they guess correctly.

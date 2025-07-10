@@ -1,0 +1,51 @@
+## Coding Conventions
+
+### Slide 1: What are Coding Conventions?
+
+  * **Coding conventions** are a set of guidelines for a specific programming language that recommend programming style, practices, and methods for each aspect of a program written in that language.
+  * They are about making code more readable and maintainable.
+
+### Slide 2: Why are Coding Conventions Important?
+
+  * **Readability:** Code is read much more often than it is written.
+  * **Consistency:** Makes it easier for other developers (and your future self) to understand your code.
+  * **Maintainability:** Well-formatted code is easier to debug and modify.
+  * **Collaboration:** Essential for teams working on the same codebase.
+
+### Slide 3: PEP 8: The Style Guide for Python Code
+
+  * **PEP 8** is the official style guide for Python code.
+  * It provides guidelines for things like:
+      * **Indentation:** Use 4 spaces per indentation level.
+      * **Line Length:** Limit all lines to a maximum of 79 characters.
+      * **Naming Conventions:**
+          * `lowercase` for functions and variables.
+          * `snake_case` for functions and variables (e.g., `my_variable`).
+          * `PascalCase` for classes.
+          * `UPPERCASE_SNAKE_CASE` for constants.
+      * **Whitespace:** Use it wisely to improve readability.
+
+### Slide 4: Example: Good vs. Bad Style
+```py
+
+# Bad Style: Inconsistent naming, poor spacing, long lines
+def calculatearea(radius,PI=3.14):
+ result=PI*radius*radius #This is a very long line that is hard to read and doesn't follow conventions.
+ return result
+
+# Good Style: Follows PEP 8
+PI_CONSTANT = 3.14
+
+def calculate_area(radius):
+    """Calculates the area of a circle."""
+    result = PI_CONSTANT * radius * radius
+    return result
+```
+### Slide 5: Further Reading and Practice
+
+  * **Further Reading:**
+      * The official PEP 8 documentation: [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/)
+      * *Think Python, 2nd Edition* emphasizes clean code throughout.
+  * **Practice Exercise:**
+      * Install a linter (like `flake8` or use the one built into your IDE) to automatically check your code for PEP 8 compliance.
+      * Go back to a program you've written and refactor it to follow PEP 8.

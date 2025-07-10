@@ -1,0 +1,55 @@
+## Variables and Types
+
+### Slide 1: What is a Variable?
+
+  * A **variable** is a named location in memory where you can store a value.
+  * You can think of it as a labeled box where you put information.
+  * You give a variable a name, and you can change the value it holds.
+
+### Slide 2: Assigning Values to Variables
+
+  * In Python, you use the assignment operator (`=`) to assign a value to a variable.
+
+<!-- end list -->
+```py
+
+# Assign the string "Alice" to the variable 'name'
+name = "Alice"
+
+# Assign the integer 30 to the variable 'age'
+age = 30
+
+# Now we can use the variables
+print(name)  # Output: Alice
+print(age)   # Output: 30
+```
+### Slide 3: Basic Data Types
+
+Every value in Python has a **data type**. Here are some fundamental types:
+
+  * **Integer (`int`):** Whole numbers, like `10`, `-5`, `0`.
+  * **Float (`float`):** Numbers with a decimal point, like `3.14`, `-0.5`.
+  * **String (`str`):** A sequence of characters, enclosed in single (`'`) or double (`"`) quotes.
+  * **Boolean (`bool`):** Represents truth values, either `True` or `False`.
+
+### Slide 4: Checking a Variable's Type
+
+You can use the `type()` function to see the data type of a variable.
+```py
+
+message = "Hello, Python!"
+count = 5
+pi = 3.14159
+is_learning = True
+
+print(type(message))    # Output: <class 'str'>
+print(type(count))      # Output: <class 'int'>
+print(type(pi))         # Output: <class 'float'>
+print(type(is_learning))# Output: <class 'bool'>
+```
+### Slide 5: Further Reading and Practice
+
+  * **Further Reading:** *Think Python, 2nd Edition*, Chapter 2: "Variables, expressions and statements".
+  * **Practice Exercise:**
+      * Create variables of different types (integer, float, string, boolean) and print their values and types.
+      * Create a variable `x` and assign it a value. Then, assign a new value to `x`. Print `x` after each assignment to see how its value changes.

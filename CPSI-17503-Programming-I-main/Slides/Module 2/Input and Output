@@ -1,0 +1,65 @@
+## Input/Output (input() and print())
+
+### Slide 1: Interacting with the User
+
+  * A program is more useful when it can interact with the user.
+  * **Output:** Displaying information to the user (using `print()`).
+  * **Input:** Getting information from the user (using `input()`).
+
+### Slide 2: Output with `print()`
+
+  * The `print()` function is used to display output on the console.
+  * You can print strings, numbers, variables, and more.
+  * You can pass multiple items to `print()`, and it will separate them with a space.
+
+<!-- end list -->
+```py
+
+print("Hello, World!")
+
+name = "Alice"
+age = 30
+print("Name:", name, "Age:", age)
+
+# Using an f-string for formatted output (recommended)
+print(f"Name: {name}, Age: {age}")
+```
+### Slide 3: Input with `input()`
+
+  * The `input()` function prompts the user to enter some text and returns it as a **string**.
+  * You can provide a string to `input()` to be used as a prompt.
+
+<!-- end list -->
+```py
+
+# Prompt the user for their name
+name = input("Please enter your name: ")
+
+# Greet the user
+print(f"Hello, {name}!")
+```
+### Slide 4: `input()` and Type Conversion
+
+  * **Important:** `input()` always returns a string.
+  * If you need to treat the input as a number, you must convert it using `int()` or `float()`.
+
+<!-- end list -->
+```py
+
+age_str = input("Please enter your age: ")
+
+# Convert the string to an integer
+age_int = int(age_str)
+
+# Now you can do math with it
+years_until_100 = 100 - age_int
+
+print(f"You will be 100 years old in {years_until_100} years.")
+
+```
+### Slide 5: Further Reading and Practice
+
+  * **Further Reading:** *Think Python, 2nd Edition*, Chapter 1: "The way of the program" and Chapter 2: "Variables, expressions and statements".
+  * **Practice Exercise:**
+      * Write a program that asks the user for their name and their favorite color and then prints a message combining both.
+      * Write a program that asks for two numbers, adds them together, and prints the result. Remember to convert the input to numbers\!

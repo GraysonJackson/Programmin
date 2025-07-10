@@ -1,0 +1,66 @@
+## Modular Design
+
+### Slide 1: What is Modular Design?
+
+  * **Modular design** is the practice of breaking down a large, complex program into smaller, self-contained, and manageable parts called **modules**.
+  * In Python, any `.py` file can be a module.
+  * Modules can contain functions, classes, and variables.
+
+### Slide 2: Why Use Modular Design?
+
+  * **Organization:** Keeps related code together, making the project easier to navigate and understand.
+  * **Reusability:** A module can be imported and used in many different programs.
+  * **Collaboration:** Different developers can work on different modules simultaneously.
+  * **Maintainability:** It's easier to debug and update a small module than a single, monolithic program.
+
+### Slide 3: Creating and Importing Modules
+
+  * To create a module, you simply save your Python code in a `.py` file.
+  * To use the contents of a module in another file, you use the `import` statement.
+
+**`my_module.py`:**
+```py
+
+# A simple module with a function
+def greet(name):
+    return f"Hello, {name} from my_module!"
+
+```
+**`main.py`:**
+```py
+
+# Import the entire module
+import my_module
+
+# Call the function using module_name.function_name
+message = my_module.greet("Alice")
+print(message)
+```
+### Slide 4: Different Ways to Import
+
+You can import specific parts of a module to avoid typing the module name repeatedly.
+```py
+
+# in main.py
+
+# Import a specific function from the module
+from my_module import greet
+
+# Now you can call the function directly
+message = greet("Bob")
+print(message)
+
+# You can also give the imported module or function an alias
+import my_module as mm
+print(mm.greet("Charlie"))
+
+from my_module import greet as say_hello
+print(say_hello("David"))
+```
+### Slide 5: Further Reading and Practice
+
+  * **Further Reading:** *Think Python, 2nd Edition*, Chapter 3 has a section on importing modules (`math` module example). More advanced concepts are found in Chapter 14.
+  * **Practice Exercise:**
+      * Create a file named `calculations.py`. In it, define functions for `add`, `subtract`, and `multiply`.
+      * Create another file named `app.py`. In this file, import your `calculations` module and use the functions to perform some calculations.
+      * Try importing just the `add` function from `calculations.py`.
